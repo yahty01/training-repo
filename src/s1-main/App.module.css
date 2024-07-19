@@ -3,9 +3,19 @@
 }
 
 .hw {
-
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    height: 90vh;
 }
 
 .hwTitle {
+    outline: 1px red solid;
+}
 
+.contmessage{
+    display: flex;
+    flex-direction: column;
+    outline: 1px red solid;
 }
