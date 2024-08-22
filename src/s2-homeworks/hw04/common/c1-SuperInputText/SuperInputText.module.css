@@ -1,7 +1,18 @@
+:root {
+  --main-color-outline: #D1D1D1FF;  /* Определяем переменную с цветом */
+  --error-color: #CC1439FF;
+}
+
 .input:focus {
+  outline: 1px solid var(--main-color-outline);
 }
 
 .input {
+  padding: 10px;
+  min-height: 36px;
+  width: 100%;
+  border: 1px solid var(--main-color-outline);
+  border-radius: 5px;
 }
 
 .inputWrapper {
@@ -11,10 +22,13 @@
 }
 
 .errorInput {
+  border: 1px solid var(--error-color);
 }
 
 .errorInput:focus {
+  outline: 1px solid var(--error-color);
 }
 
 .error {
+  color: var(--error-color);
 }

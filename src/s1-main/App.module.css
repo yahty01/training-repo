@@ -1,5 +1,6 @@
 .App {
     --header_height: 60px;
+    background-size: contain;
 }
 
 .hw {
@@ -11,11 +12,15 @@
 }
 
 .hwTitle {
-    outline: 1px red solid;
+    outline: 1px rgba(217, 217, 217, 1) solid;
+    font-family: Montserrat, sans-serif;
+    font-size: 22px;
+    font-weight: 600;
+    line-height: 1.2;
 }
 
 .contmessage{
     display: flex;
     flex-direction: column;
-    outline: 1px red solid;
+    outline: 1px rgba(217, 217, 217, 1) solid;
 }

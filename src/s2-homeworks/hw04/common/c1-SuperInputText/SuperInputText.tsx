@@ -8,16 +8,20 @@ import React, {
 import s from './SuperInputText.module.css'
 
 // тип пропсов обычного инпута
-type DefaultInputPropsType = DetailedHTMLProps<InputHTMLAttributes<HTMLInputElement>,
-    HTMLInputElement>
+type DefaultInputPropsType = DetailedHTMLProps<InputHTMLAttributes<HTMLInputElement>, HTMLInputElement>
 
 // здесь мы говорим что у нашего инпута будут такие же пропсы как у обычного инпута, кроме type
 // (чтоб не писать value: string, onChange: ...; они уже все описаны в DefaultInputPropsType)
 type SuperInputTextPropsType = Omit<DefaultInputPropsType, 'type'> & {
+  // Omit - утилитный тип, для создания нового типа на основе уже существующего,
+  // исключая определенный свойства из исходного типа Функция Omit<T, K> работает следующим образом:
+  // T — это исходный тип, который вы хотите изменить.
+  // K — это ключи (свойства) из типа T, которые нужно исключить.
     // и + ещё пропсы которых нет в стандартном инпуте
     onChangeText?: (value: string) => void
     onEnter?: () => void
-    error?: ReactNode
+    error?: ReactNode // ReactNode — это тип, определённый в React, который представляет собой всё, что может быть рендерено в JSX. Использование ReactNode для свойства error даёт гибкость.
+                       // Вместо того, чтобы ограничивать тип ошибки только строкой, вы можете передавать любую разметку, включая сложные компоненты, что полезно для кастомизации отображения ошибок.
     spanClassName?: string
 }
 
@@ -31,7 +35,6 @@ const SuperInputText: React.FC<SuperInputTextPropsType> = (
         className,
         spanClassName,
         id,
-
         ...restProps // все остальные пропсы попадут в объект restProps
     }
 ) => {
@@ -52,7 +55,7 @@ const SuperInputText: React.FC<SuperInputTextPropsType> = (
         + (spanClassName ? ' ' + spanClassName : '')
     const finalInputClassName = s.input
         + (error ? ' ' + s.errorInput : ' ' + s.superInput)
-        + (className ? ' ' + className : '') // задача на смешивание классов
+        + (className ? ' ' + className : '') // задача на смешивание классов?????
 
     return (
         <div className={s.inputWrapper}>
@@ -60,7 +63,9 @@ const SuperInputText: React.FC<SuperInputTextPropsType> = (
                 id={id}
                 type={'text'}
                 onChange={onChangeCallback}
-                onKeyPress={onKeyPressCallback}
+                onKeyPress={onKeyPressCallback} //onKeyPress помечен как устаревший (deprecated) в React, начиная с версии 17.
+                                                // Это событие раньше использовалось для отслеживания нажатия клавиш, однако теперь
+                                                //рекомендуется использовать вместо него onKeyDown или onKeyUp, в зависимости от задачи.
                 className={finalInputClassName}
                 {...restProps} // отдаём инпуту остальные пропсы если они есть (value например там внутри)
             />

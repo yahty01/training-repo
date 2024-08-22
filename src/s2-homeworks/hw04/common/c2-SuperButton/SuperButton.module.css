@@ -1,35 +1,69 @@
+:root {
+  --main-backcolor-button: rgba(0, 102, 204, 1);  /* Определяем переменную с цветом */
+  --main-hover-backcolor-button: rgba(0, 128, 255, 1);
+  --main-active-backcolor-button: rgba(0, 89, 178, 1);
+  --red-backcolor-button: #CC1439FF;
+  --red-hover-backcolor-button: rgba(255, 26, 71, 1);
+  --red-active-backcolor-button: rgba(178, 18, 50, 1);
+  --disabled-backcolor-button: rgba(0, 77, 153, 0.5);
+  --disabled-text-color-button: rgba(0, 46, 92, 0.5);
+  --secondary-backcolor-button: rgba(0, 102, 204, 0);
+  --secondary-color-button: rgba(0, 102, 204, 1);
+  --secondary-active-backcolor-button: rgba(201, 229, 255, 1);
+}
+
 .button {
+  padding: 5px 24px 5px 24px;
+  color: #FFFFFF;
+  border-radius: 3px;
+  border: none;
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 1.3;
 }
 
 .disabled {
+  background-color: var(--disabled-backcolor-button);
+  color: var(--disabled-text-color-button);
 }
 
 .secondary {
+  background-color: var(--secondary-backcolor-button);
+  border: 1px solid var(--secondary-color-button);
+  color: var(--secondary-color-button);
 }
 
 .default {
+  background-color: var(--main-backcolor-button);
 }
 
 .red {
+  background-color: var(--red-backcolor-button);
 }
 
 .default:hover {
+  background-color: var(--main-hover-backcolor-button);
 }
 
 .red:hover {
+  background-color: var(--red-hover-backcolor-button);
 }
 
 .secondary:hover {
+  background-color: rgba(229, 240, 250, 1);
 }
 
 
 .default:active {
+  background-color: var(--main-active-backcolor-button);
 }
 
 .secondary:active {
+  background-color: var(--secondary-active-backcolor-button);
 }
 
 .red:active {
+  background-color: var(--red-active-backcolor-button);
 }
 
 .button:disabled {
