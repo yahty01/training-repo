@@ -1,15 +1,16 @@
 {
   "files": {
-    "main.css": "/training-repo/static/css/main.aab11ae2.css",
-    "main.js": "/training-repo/static/js/main.798f7ab2.js",
+    "main.css": "/training-repo/static/css/main.09682b35.css",
+    "main.js": "/training-repo/static/js/main.d4ecb676.js",
     "static/js/787.66cb4309.chunk.js": "/training-repo/static/js/787.66cb4309.chunk.js",
+    "static/media/checked.svg": "/training-repo/static/media/checked.b75ca55e8759862b4083.svg",
     "index.html": "/training-repo/index.html",
-    "main.aab11ae2.css.map": "/training-repo/static/css/main.aab11ae2.css.map",
-    "main.798f7ab2.js.map": "/training-repo/static/js/main.798f7ab2.js.map",
+    "main.09682b35.css.map": "/training-repo/static/css/main.09682b35.css.map",
+    "main.d4ecb676.js.map": "/training-repo/static/js/main.d4ecb676.js.map",
     "787.66cb4309.chunk.js.map": "/training-repo/static/js/787.66cb4309.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.aab11ae2.css",
-    "static/js/main.798f7ab2.js"
+    "static/css/main.09682b35.css",
+    "static/js/main.d4ecb676.js"
   ]
 }
