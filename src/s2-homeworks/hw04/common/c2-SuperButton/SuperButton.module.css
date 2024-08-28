@@ -1,5 +1,5 @@
 :root {
-  --main-backcolor-button: rgba(0, 102, 204, 1);  /* Определяем переменную с цветом */
+  --main-backcolor-button: rgba(0, 102, 204, 1); /* Определяем переменную с цветом */
   --main-hover-backcolor-button: rgba(0, 128, 255, 1);
   --main-active-backcolor-button: rgba(0, 89, 178, 1);
   --red-backcolor-button: #CC1439FF;
@@ -22,9 +22,17 @@
   line-height: 1.3;
 }
 
+.button:hover {
+  cursor: pointer;
+}
+
 .disabled {
   background-color: var(--disabled-backcolor-button);
   color: var(--disabled-text-color-button);
+}
+
+.disabled:hover {
+  cursor: default;
 }
 
 .secondary {
@@ -42,6 +50,7 @@
 }
 
 .default:hover {
+
   background-color: var(--main-hover-backcolor-button);
 }
 
@@ -52,7 +61,6 @@
 .secondary:hover {
   background-color: rgba(229, 240, 250, 1);
 }
-
 
 .default:active {
   background-color: var(--main-active-backcolor-button);
