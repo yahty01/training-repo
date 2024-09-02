@@ -1,6 +1,11 @@
+html {
+    scrollbar-width: none;
+}
+
 .App {
     --header_height: 60px;
     background-size: contain;
+    background-color: antiquewhite;
 }
 
 .hw {
@@ -11,16 +16,3 @@
     height: 90vh;
 }
 
-.hwTitle {
-    outline: 1px rgba(217, 217, 217, 1) solid;
-    font-family: Montserrat, sans-serif;
-    font-size: 22px;
-    font-weight: 600;
-    line-height: 1.2;
-}
-
-.contmessage{
-    display: flex;
-    flex-direction: column;
-    outline: 1px rgba(217, 217, 217, 1) solid;
-}

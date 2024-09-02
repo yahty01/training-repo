@@ -1,10 +1,20 @@
 .sidebar {
+  position: absolute;
+  background-color: whitesmoke;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 45vh;
+  display: none;
 }
 
 .sidebar.open {
+  display: block;
 }
 
 .background {
+  background-color: rgba(0, 0, 0, 0.18);
+  width: 100%;
 }
 
 .nav {
