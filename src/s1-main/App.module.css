@@ -1,6 +1,12 @@
 html {
-    scrollbar-width: none;
+    overflow: auto; /* Оставляем возможность прокрутки */
+    scrollbar-width: none; /* Скрыть скроллбар для Firefox */
 }
+
+::-webkit-scrollbar {
+    display: none; /* Скрыть скроллбар для WebKit-браузеров */
+}
+
 
 .App {
     --header_height: 60px;
