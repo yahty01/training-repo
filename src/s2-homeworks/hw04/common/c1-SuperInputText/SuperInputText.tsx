@@ -35,6 +35,7 @@ const SuperInputText: React.FC<SuperInputTextPropsType> = (
         className,
         spanClassName,
         id,
+        value,
         ...restProps // все остальные пропсы попадут в объект restProps
     }
 ) => {
@@ -64,6 +65,7 @@ const SuperInputText: React.FC<SuperInputTextPropsType> = (
                                                 // Это событие раньше использовалось для отслеживания нажатия клавиш, однако теперь
                                                 //рекомендуется использовать вместо него onKeyDown или onKeyUp, в зависимости от задачи.
                 className={finalInputClassName}
+                value={value}
                 {...restProps} // отдаём инпуту остальные пропсы если они есть (value например там внутри)
             />
             <span

@@ -6,6 +6,7 @@
   height: 100%;
   width: 45vh;
   transition: left 0.3s ease; /* Переход для плавного появления */
+  z-index: 10;
 }
 
 .sidebar.open {
@@ -28,6 +29,7 @@
   background-color: rgba(0, 0, 0, 0.5);
   opacity: 0;
   animation-fill-mode: forwards; /* Удерживает конечное состояние */
+  z-index: 10;
 }
 
 .background.open {
