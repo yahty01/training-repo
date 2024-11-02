@@ -2,27 +2,43 @@
   position: absolute;
   background-color: whitesmoke;
   top: 0;
-  left: 0;
+  left: -45vh; /* Изначально скрыт за экраном слева */
   height: 100%;
   width: 45vh;
-  display: none;
+  transition: left 0.3s ease; /* Переход для плавного появления */
 }
 
 .sidebar.open {
-  display: block;
+  left: 0; /* При добавлении класса .open сайдбар выезжает слева */
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
 }
 
 .background {
   position: absolute;
   height: 100%;
-  background-color: rgba(0, 0, 0, 0.5);
   width: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  opacity: 0;
+  animation-fill-mode: forwards; /* Удерживает конечное состояние */
+}
+
+.background.open {
+  animation: fadeIn 0.3s ease forwards; /* Анимация затемнения */
 }
 
 .nav {
   display: flex;
   flex-direction: column;
   align-items: center;
+  margin-top: 30px;
 }
 
 .nav a {
@@ -45,7 +61,17 @@
   text-decoration: none;
 }
 .close {
+  position: absolute;
+  right: 10px;
+  top: 10px;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+.close:hover {
+  color: var(--disabled-text-color-button);
 }
 
 .close img {
+  height: 28px;
 }

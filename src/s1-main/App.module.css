@@ -11,7 +11,7 @@ html {
 .App {
     --header_height: 60px;
     background-size: contain;
-    background-color: antiquewhite;
+    background-color: #ffffff;
 }
 
 .hw {
@@ -20,5 +20,37 @@ html {
     justify-content: center;
     flex-direction: column;
     height: 90vh;
+    position: relative; /* Чтобы псевдоэлемент располагался относительно родителя */
+    width: 100%;
+}
+.hw::after {
+    content: "";
+    display: block;
+    width: 100%; /* Линия будет во всю ширину элемента */
+    height: 2px; /* Толщина линии */
+    background-color: #D9D9D9; /* Цвет линии */
+    position: absolute;
+    bottom: -10px; /* Расстояние от текста */
+    left: 0;
+}
+
+.hwTitle {
+    font-size: 2rem;
+    font-weight: 600;
+    line-height: 1.1;
+    text-align: center;
+    position: relative; /* Позволяет использовать псевдоэлемент */
+    padding-top: 40px;
+}
+
+.hwTitle::after {
+    content: "";
+    display: block;
+    width: 100%; /* Линия будет во всю ширину элемента */
+    height: 1px; /* Толщина линии */
+    background-color: #D9D9D9; /* Цвет линии */
+    position: absolute;
+    bottom: -10px; /* Расстояние от текста */
+    left: 0;
 }
 

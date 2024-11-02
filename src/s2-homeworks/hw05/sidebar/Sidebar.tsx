@@ -2,8 +2,7 @@ import React, {FC} from 'react'
 import {NavLink} from 'react-router-dom'
 import s from './Sidebar.module.css'
 import {PATH} from '../Pages'
-import closeIcon from './closeOutline.svg'
-
+import closeIcon from "./closeOutline.svg"
 type PropsType = {
 	open: boolean
 	handleClose: () => void
@@ -15,7 +14,7 @@ export const Sidebar: FC<PropsType> = ({open, handleClose}) => {
 	return (
 		<>
 			{/*затемнение справа от открытого меню*/}
-			{open && <div className={s.background} onClick={handleClose}/>}
+			{open && <div className={`${s.background} ${s.open}`} onClick={handleClose}/>}
 
 			<aside className={sidebarClass}>
 				<button className={s.close} onClick={handleClose}>
