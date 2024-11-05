@@ -16,12 +16,14 @@ html {
 
 .hw {
     display: flex;
-    align-items: center;
-    justify-content: center;
+    align-items: flex-start;
+    justify-content: flex-start;
     flex-direction: column;
     height: 90vh;
     position: relative; /* Чтобы псевдоэлемент располагался относительно родителя */
     width: 100%;
+    padding-left: 70px;
+    padding-top: 42px;
 }
 .hw::after {
     content: "";
@@ -38,9 +40,10 @@ html {
     font-size: 2rem;
     font-weight: 600;
     line-height: 1.1;
-    text-align: center;
+    text-align: start;
     position: relative; /* Позволяет использовать псевдоэлемент */
     padding-top: 40px;
+    padding-left: 70px;
 }
 
 .hwTitle::after {

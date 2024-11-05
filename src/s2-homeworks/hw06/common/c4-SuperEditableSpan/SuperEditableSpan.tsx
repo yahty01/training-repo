@@ -28,7 +28,7 @@ type SuperEditableSpanType = Omit<DefaultInputPropsType, 'type'> & {
 }
 
 const SuperEditableSpan: React.FC<SuperEditableSpanType> = (
-    { autoFocus, onBlur, onEnter, spanProps, value, ...restProps }
+    { autoFocus, onBlur, onEnter, spanProps, ...restProps }
 ) => {
     const [editMode, setEditMode] = useState<boolean>(false)
     const {children, onDoubleClick, className, defaultText, ...restSpanProps} =
@@ -63,7 +63,6 @@ const SuperEditableSpan: React.FC<SuperEditableSpanType> = (
                     onBlur={onBlurCallback}
                     onEnter={onEnterCallback}
                     className={s.input}
-                    value={value}
                     {...restProps} // отдаём инпуту остальные пропсы если они есть (value например там внутри)
                 />
             ) : (
@@ -81,7 +80,7 @@ const SuperEditableSpan: React.FC<SuperEditableSpanType> = (
                     >
                         {/*если нет захардкодженного текста для спана, то значение инпута*/}
 
-                        {children || value || defaultText}
+                        {children || restProps.value || defaultText}
                     </span>
                 </div>
             )}
