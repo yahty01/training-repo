@@ -1,59 +1,60 @@
 html {
-    overflow: auto; /* Оставляем возможность прокрутки */
-    scrollbar-width: none; /* Скрыть скроллбар для Firefox */
+  overflow: auto; /* Оставляем возможность прокрутки */
+  scrollbar-width: none; /* Скрыть скроллбар для Firefox */
 }
 
 ::-webkit-scrollbar {
-    display: none; /* Скрыть скроллбар для WebKit-браузеров */
+  display: none; /* Скрыть скроллбар для WebKit-браузеров */
 }
 
 
 .App {
-    --header_height: 60px;
-    background-size: contain;
-    background-color: #ffffff;
+  --header_height: 60px;
+  background-size: contain;
+  background-color: #ffffff;
 }
 
 .hw {
-    display: flex;
-    align-items: flex-start;
-    justify-content: flex-start;
-    flex-direction: column;
-    height: 90vh;
-    position: relative; /* Чтобы псевдоэлемент располагался относительно родителя */
-    width: 100%;
-    padding-left: 70px;
-    padding-top: 42px;
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  flex-direction: column;
+  height: 90vh;
+  position: relative; /* Чтобы псевдоэлемент располагался относительно родителя */
+  width: 100%;
+  padding-left: 70px;
+  padding-top: 42px;
 }
+
 .hw::after {
-    content: "";
-    display: block;
-    width: 100%; /* Линия будет во всю ширину элемента */
-    height: 2px; /* Толщина линии */
-    background-color: #D9D9D9; /* Цвет линии */
-    position: absolute;
-    bottom: -10px; /* Расстояние от текста */
-    left: 0;
+  content: "";
+  display: block;
+  width: 100%; /* Линия будет во всю ширину элемента */
+  height: 2px; /* Толщина линии */
+  background-color: #D9D9D9; /* Цвет линии */
+  position: absolute;
+  bottom: -10px; /* Расстояние от текста */
+  left: 0;
 }
 
 .hwTitle {
-    font-size: 2rem;
-    font-weight: 600;
-    line-height: 1.1;
-    text-align: start;
-    position: relative; /* Позволяет использовать псевдоэлемент */
-    padding-top: 40px;
-    padding-left: 70px;
+  font-size: 2rem;
+  font-weight: 600;
+  line-height: 1.1;
+  text-align: start;
+  position: relative; /* Позволяет использовать псевдоэлемент */
+  padding-top: 40px;
+  padding-left: 70px;
 }
 
 .hwTitle::after {
-    content: "";
-    display: block;
-    width: 100%; /* Линия будет во всю ширину элемента */
-    height: 1px; /* Толщина линии */
-    background-color: #D9D9D9; /* Цвет линии */
-    position: absolute;
-    bottom: -10px; /* Расстояние от текста */
-    left: 0;
+  content: "";
+  display: block;
+  width: 100%; /* Линия будет во всю ширину элемента */
+  height: 1px; /* Толщина линии */
+  background-color: #D9D9D9; /* Цвет линии */
+  position: absolute;
+  bottom: -10px; /* Расстояние от текста */
+  left: 0;
 }
 
