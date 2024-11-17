@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/training-repo/static/css/main.fdd68ece.css",
-    "main.js": "/training-repo/static/js/main.675c6836.js",
+    "main.css": "/training-repo/static/css/main.9aa7cbb1.css",
+    "main.js": "/training-repo/static/js/main.750f7832.js",
     "static/js/787.66cb4309.chunk.js": "/training-repo/static/js/787.66cb4309.chunk.js",
     "static/media/avatar.png": "/training-repo/static/media/avatar.d947cb9d0d13765666b6.png",
     "static/media/avatar2.png": "/training-repo/static/media/avatar2.6783e5ff816152e71a08.png",
@@ -12,12 +12,12 @@
     "static/media/checked.svg": "/training-repo/static/media/checked.b75ca55e8759862b4083.svg",
     "index.html": "/training-repo/index.html",
     "static/media/burger.svg": "/training-repo/static/media/burger.700e416f7bfe3697f96b36c778d25355.svg",
-    "main.fdd68ece.css.map": "/training-repo/static/css/main.fdd68ece.css.map",
-    "main.675c6836.js.map": "/training-repo/static/js/main.675c6836.js.map",
+    "main.9aa7cbb1.css.map": "/training-repo/static/css/main.9aa7cbb1.css.map",
+    "main.750f7832.js.map": "/training-repo/static/js/main.750f7832.js.map",
     "787.66cb4309.chunk.js.map": "/training-repo/static/js/787.66cb4309.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.fdd68ece.css",
-    "static/js/main.675c6836.js"
+    "static/css/main.9aa7cbb1.css",
+    "static/js/main.750f7832.js"
   ]
 }
