@@ -11,12 +11,11 @@ function Clock() {
 
 	const start = () => {
 		stop()
-		setTimerId( window.setInterval(() => {
+		const id: number = ( window.setInterval(() => {
 			setDate(new Date)
 		}, 1000))
-
+		setTimerId(id)
 		// сохранить ид таймера (https://learn.javascript.ru/settimeout-setinterval#setinterval)
-
 	}
 
 	const stop = () => {

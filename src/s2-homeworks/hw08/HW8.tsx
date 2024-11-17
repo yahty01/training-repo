@@ -16,7 +16,7 @@ export type UserType = {
     name: string
     age: number
 }
-
+// /**/
 const initialPeople: UserType[] = [
     // студенты могут поменять имя/возраст/количество объектов, _id должны быть целочисленные
     {_id: 0, name: 'Кот', age: 3},
