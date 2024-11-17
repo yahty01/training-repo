@@ -12,8 +12,8 @@ export const Layout = ({ children }: PropsType) => {
     const handleOpen = () => setOpen(true)
 
     useEffect(() => {
-        open && (document.body.style.overflow = 'hidden')
-        !open && (document.body.style.overflow = 'unset')
+        open && (document.documentElement.style.overflow = 'hidden')
+        !open && (document.documentElement.style.overflow  = 'unset')
     }, [open]) // отключает прокрутку при открытом меню
 
     return (
@@ -21,7 +21,6 @@ export const Layout = ({ children }: PropsType) => {
             <Sidebar open={open} handleClose={handleClose} />
             <Header handleOpen={handleOpen} />
             <div>
-                {/*страницы*/}
                 {children}
             </div>
         </>
