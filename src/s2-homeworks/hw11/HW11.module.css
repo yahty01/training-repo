@@ -1,8 +1,17 @@
 .container {
+    outline: 2px solid red;
 }
 
 .wrapper {
+    outline: 2px solid green;
+    display: flex;
+    align-items: center;
+    gap: 10px;
 }
 
 .number {
+    display: inline-block;
+    width: 3ch;
+    text-align: center;
+    outline: 2px solid red;
 }

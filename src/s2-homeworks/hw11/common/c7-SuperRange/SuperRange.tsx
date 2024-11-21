@@ -1,13 +1,22 @@
 import React from 'react'
 import {Slider, SliderProps} from '@mui/material'
 
-const SuperRange: React.FC<SliderProps> = (props) => {
+type Props = {
+  value: number | number[];
+  onChange: (event: Event, value: number | number[]) => void;
+} & SliderProps;
+
+const SuperRange = ({ value, onChange, ...rest }: Props) => {
     return (
         <Slider
-            sx={{ // стили для слайдера // пишет студент
-                
-            }}
-            {...props} // отдаём слайдеру пропсы если они есть (value например там внутри)
+          value={value}
+          onChange={onChange}
+          {...rest}
+          sx={{
+            width: '200px',
+            marginLeft: '10px',
+            ...rest.sx,}
+          } // Добавляем дополнительные стили
         />
     )
 }
