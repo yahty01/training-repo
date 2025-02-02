@@ -13,7 +13,8 @@ type DefaultSelectPropsType = DetailedHTMLProps<
 
 type SuperSelectPropsType = DefaultSelectPropsType & {
     options?: Arr[]
-    onChangeOption?: (option: SetStateAction<number>) => void
+    // onChangeOption?: (option: SetStateAction<number>) => void
+    onChangeOption?: (option: number) => void
 }
 
 const SuperSelect: React.FC<SuperSelectPropsType> = ({
@@ -40,6 +41,7 @@ const SuperSelect: React.FC<SuperSelectPropsType> = ({
         // onChange && onChange(e) ❓
         console.log('onChangeCallbakc')
         onChangeOption && onChangeOption(Number(e.currentTarget.value))
+        console.log(e.currentTarget.value)
     }
 
     const finalSelectClassName = s.select + (className ? ' ' + className : '')
