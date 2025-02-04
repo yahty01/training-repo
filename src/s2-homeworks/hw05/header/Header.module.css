@@ -4,7 +4,7 @@
 }
 
 .header {
-  background-color: rgba(199, 155, 15, 0.4);
+  position: relative;
   display: flex;
   justify-content: space-between;
   padding: 20px 3vw;
@@ -18,3 +18,21 @@
   line-height: 29px;
   text-align: left;
 }
+
+
+[data-theme='1'] .header {
+  color: #000000;
+  background-color: #dedcdc;
+}
+
+[data-theme='2'] .header{
+  color: #000000;
+  background-color: #aebbc9;
+}
+
+[data-theme='3'] .header{
+  color: #FFFFFF;
+  background-color: #495a75;
+}
+
+
