@@ -18,6 +18,7 @@ const themes = [
     {id: 2, value: 'blue'},
     {id: 3, value: 'dark'},
 ]
+
 //todo: Установка притера
 const HW12 = () => {
     const themeId = useSelector<AppStoreType, number>(state => state.theme.themeId)
@@ -40,7 +41,7 @@ const HW12 = () => {
             </div>
 
             <div className={s2.hw}>
-              <span>{themeId}</span>
+              <span>Выберете тему</span>
                 <SuperSelect
                     id={'hw12-select-theme'}
                     className={s.select}
