@@ -11,7 +11,6 @@ html {
 .App {
   --header_height: 60px;
   background-size: contain;
-  background-color: #ffffff;
 }
 
 .hw {
