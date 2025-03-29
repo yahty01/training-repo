@@ -15,7 +15,7 @@ import errorUnknown from './images/error.svg'
 * */
 
 const HW13 = () => {
-    const [code, setCode] = useState('')
+    const [code, setCode] = useState(' ')
     const [text, setText] = useState('')
     const [info, setInfo] = useState('')
     const [image, setImage] = useState('')
@@ -36,11 +36,18 @@ const HW13 = () => {
             .then((res) => {
                 setCode('Код 200!')
                 setImage(success200)
-                // дописать
+                setInfo('...всё ок)\n' +
+                  'код 200 - обычно означает что скорее всего всё ок)')
 
             })
             .catch((e) => {
-                // дописать
+                setCode(`Ошибка ${e.response.status === 0 ? '🚨' : e.response.status}`)
+                if (e.response.status === 0) {
+                    setImage(errorUnknown)
+                } else {
+                    setImage(e.response.status === 400 ? error400 : error500)
+                }
+                setInfo('описание ошибки')
 
             })
     }
@@ -55,7 +62,8 @@ const HW13 = () => {
                         id={'hw13-send-true'}
                         onClick={send(true)}
                         xType={'secondary'}
-                        // дописать
+                        disabled={!code}
+
 
                     >
                         Send true
@@ -64,7 +72,7 @@ const HW13 = () => {
                         id={'hw13-send-false'}
                         onClick={send(false)}
                         xType={'secondary'}
-                        // дописать
+                        disabled={!code}
 
                     >
                         Send false
@@ -73,7 +81,7 @@ const HW13 = () => {
                         id={'hw13-send-undefined'}
                         onClick={send(undefined)}
                         xType={'secondary'}
-                        // дописать
+                        disabled={!code}
 
                     >
                         Send undefined
@@ -82,7 +90,8 @@ const HW13 = () => {
                         id={'hw13-send-null'}
                         onClick={send(null)} // имитация запроса на не корректный адрес
                         xType={'secondary'}
-                        // дописать
+                        disabled={!code}
+
 
                     >
                         Send null
