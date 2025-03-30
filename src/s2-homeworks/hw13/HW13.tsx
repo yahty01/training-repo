@@ -34,16 +34,16 @@ const HW13 = () => {
         axios
             .post(url, {success: x})
             .then((res) => {
+                setInfo('')
                 setCode('Код 200!')
                 setImage(success200)
-                setInfo('...всё ок)\n' +
-                  'код 200 - обычно означает что скорее всего всё ок)')
-
+                setText('...всё ок)\n' + 'код 200 - обычно означает что скорее всего всё ок)')
             })
             .catch((e) => {
                 setCode(`Ошибка ${e.response.status === 0 ? '🚨' : e.response.status}`)
                 if (e.response.status === 0) {
                     setImage(errorUnknown)
+
                 } else {
                     setImage(e.response.status === 400 ? error400 : error500)
                 }
