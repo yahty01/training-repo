@@ -32,24 +32,20 @@ const HW14 = () => {
 
     const sendQuery = (value: string) => {
         setLoading(true)
+        setTechs([])
         getTechs(value)
-            .then((res) => {
-                // делает студент
-
-                // сохранить пришедшие данные
-
-                //
+        .then((res) => {
+            new Promise(resolve => setTimeout(resolve, 1500)).then(() => {
+                setLoading(false)
+                setTechs(res?.data?.techs || [])
+                })
             })
     }
 
     const onChangeText = (value: string) => {
         setFind(value)
-        // делает студент
-
-        // добавить/заменить значение в квери урла
-        // setSearchParams(
-
-        //
+        sendQuery(value)
+        setSearchParams(value)
     }
 
     useEffect(() => {
