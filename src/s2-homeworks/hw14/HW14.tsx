@@ -30,21 +30,23 @@ const HW14 = () => {
     const [searchParams, setSearchParams] = useSearchParams()
     const [techs, setTechs] = useState<string[]>([])
 
+
     const sendQuery = (value: string) => {
         setLoading(true)
         setTechs([])
         getTechs(value)
-        .then((res) => {
-            new Promise(resolve => setTimeout(resolve, 1500)).then(() => {
+          .then((res) => {
                 setLoading(false)
                 setTechs(res?.data?.techs || [])
                 })
-            })
+          .catch((e) => {
+            setLoading(false)
+            alert(e.response?.data?.errorText || e.message)
+          })
     }
 
     const onChangeText = (value: string) => {
         setFind(value)
-        sendQuery(value)
         setSearchParams(value)
     }
 
