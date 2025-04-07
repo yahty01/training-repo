@@ -1,5 +1,5 @@
 .container {
-    display: flex;
-    outline: red 1px solid;
-    width: fit-content(60%);
+  display: flex;
+  outline: red 1px solid;
+  width: fit-content(60%);
 }

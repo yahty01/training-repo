@@ -19,20 +19,17 @@
   text-align: left;
 }
 
-
 [data-theme='1'] .header {
   color: #000000;
   background-color: #dedcdc;
 }
 
-[data-theme='2'] .header{
+[data-theme='2'] .header {
   color: #000000;
   background-color: #aebbc9;
 }
 
-[data-theme='3'] .header{
-  color: #FFFFFF;
+[data-theme='3'] .header {
+  color: #ffffff;
   background-color: #495a75;
 }
-
-

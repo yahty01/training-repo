@@ -7,7 +7,6 @@ html {
   display: none; /* Скрыть скроллбар для WebKit-браузеров */
 }
 
-
 .App {
   --header_height: 60px;
   background-size: contain;
@@ -26,11 +25,11 @@ html {
 }
 
 .hw::after {
-  content: "";
+  content: '';
   display: block;
   width: 100%; /* Линия будет во всю ширину элемента */
   height: 2px; /* Толщина линии */
-  background-color: #D9D9D9; /* Цвет линии */
+  background-color: #d9d9d9; /* Цвет линии */
   position: absolute;
   bottom: -10px; /* Расстояние от текста */
   left: 0;
@@ -47,13 +46,12 @@ html {
 }
 
 .hwTitle::after {
-  content: "";
+  content: '';
   display: block;
   width: 100%; /* Линия будет во всю ширину элемента */
   height: 1px; /* Толщина линии */
-  background-color: #D9D9D9; /* Цвет линии */
+  background-color: #d9d9d9; /* Цвет линии */
   position: absolute;
   bottom: -10px; /* Расстояние от текста */
   left: 0;
 }
-

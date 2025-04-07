@@ -1,5 +1,5 @@
-import React from 'react'
-import {Slider, SliderProps} from '@mui/material'
+import React from 'react';
+import { Slider, SliderProps } from '@mui/material';
 
 type Props = {
   value: number | number[];
@@ -7,18 +7,18 @@ type Props = {
 } & SliderProps;
 
 const SuperRange = ({ value, onChange, ...rest }: Props) => {
-    return (
-        <Slider
-          value={value}
-          onChange={onChange}
-          {...rest}
-          sx={{
-            width: '200px',
-            marginLeft: '10px',
-            ...rest.sx,}
-          } // Добавляем дополнительные стили
-        />
-    )
-}
+  return (
+    <Slider
+      value={value}
+      onChange={onChange}
+      {...rest}
+      sx={{
+        width: '200px',
+        marginLeft: '10px',
+        ...rest.sx,
+      }} // Добавляем дополнительные стили
+    />
+  );
+};
 
-export default SuperRange
+export default SuperRange;

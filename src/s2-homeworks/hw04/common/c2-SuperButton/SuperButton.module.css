@@ -1,8 +1,13 @@
 :root {
-  --main-backcolor-button: rgba(0, 102, 204, 1); /* Определяем переменную с цветом */
+  --main-backcolor-button: rgba(
+    0,
+    102,
+    204,
+    1
+  ); /* Определяем переменную с цветом */
   --main-hover-backcolor-button: rgba(0, 128, 255, 1);
   --main-active-backcolor-button: rgba(0, 89, 178, 1);
-  --red-backcolor-button: #CC1439FF;
+  --red-backcolor-button: #cc1439ff;
   --red-hover-backcolor-button: rgba(255, 26, 71, 1);
   --red-active-backcolor-button: rgba(178, 18, 50, 1);
   --disabled-backcolor-button: rgba(0, 77, 153, 0.5);
@@ -14,7 +19,7 @@
 
 .button {
   padding: 5px 24px 5px 24px;
-  color: #FFFFFF;
+  color: #ffffff;
   border-radius: 3px;
   border: none;
   font-weight: 600;
@@ -50,7 +55,6 @@
 }
 
 .default:hover {
-
   background-color: var(--main-hover-backcolor-button);
 }
 

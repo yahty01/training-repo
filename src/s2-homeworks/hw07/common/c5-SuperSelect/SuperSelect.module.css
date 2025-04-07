@@ -1,32 +1,35 @@
 .select {
-    margin-right: 70px;
-    cursor: pointer;
-    appearance: none;
-    background-image: url("./chevron-down.svg");
-    background-repeat: no-repeat;
-    background-position: right 0.3rem top 50%, 0 0;
-    background-size: 1rem auto, 100%;
-    font-size: 14px;
-
+  margin-right: 70px;
+  cursor: pointer;
+  appearance: none;
+  background-image: url('./chevron-down.svg');
+  background-repeat: no-repeat;
+  background-position:
+    right 0.3rem top 50%,
+    0 0;
+  background-size:
+    1rem auto,
+    100%;
+  font-size: 14px;
 }
 
 .option:hover {
-    opacity: 1;
-    cursor: pointer;
-    background: red;
+  opacity: 1;
+  cursor: pointer;
+  background: red;
 }
 
 [data-theme='1'] option {
-    color: #000000;
-    background-color: #dedcdc;
+  color: #000000;
+  background-color: #dedcdc;
 }
 
-[data-theme='2'] option{
-    color: #000000;
-    background-color: #aebbc9;
+[data-theme='2'] option {
+  color: #000000;
+  background-color: #aebbc9;
 }
 
-[data-theme='3'] option{
-    color: #FFFFFF;
-    background-color: #495a75;
+[data-theme='3'] option {
+  color: #ffffff;
+  background-color: #495a75;
 }

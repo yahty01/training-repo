@@ -1,6 +1,6 @@
 :root {
-  --main-color-outline: #D1D1D1FF;  /* Определяем переменную с цветом */
-  --error-color: #CC1439FF;
+  --main-color-outline: #d1d1d1ff; /* Определяем переменную с цветом */
+  --error-color: #cc1439ff;
 }
 
 .input:focus {
@@ -22,7 +22,6 @@
 }
 
 .superInput {
-
 }
 
 .errorInput {

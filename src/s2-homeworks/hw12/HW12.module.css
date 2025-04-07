@@ -1,51 +1,49 @@
 [data-theme='1'] {
-    --color: #000000;
-    --background: #FFFFFF;
+  --color: #000000;
+  --background: #ffffff;
 }
 
 [data-theme='2'] {
-    --color: #000000;
-    --background: #DDEEFF;
+  --color: #000000;
+  --background: #ddeeff;
 }
 
 [data-theme='3'] {
-    --color: #FFFFFF;
-    --background: #212A34;
+  --color: #ffffff;
+  --background: #212a34;
 }
-
 
 [data-theme='1'] select {
-    color: #000000;
-    background-color: #FFFFFF;
+  color: #000000;
+  background-color: #ffffff;
 }
 
-[data-theme='2'] select{
-    color: #000000;
-    background-color: #DDEEFF;
+[data-theme='2'] select {
+  color: #000000;
+  background-color: #ddeeff;
 }
 
-[data-theme='3'] select{
-    color: #FFFFFF;
-    background-color: #212A34;
+[data-theme='3'] select {
+  color: #ffffff;
+  background-color: #212a34;
 }
 
 html {
-    background-color: var(--background);
-    color: var(--color);
+  background-color: var(--background);
+  color: var(--color);
 }
 
 select {
-    margin-top: 6px;
-    border: 2px solid #ccc;
-    padding: 8px;
-    font-size: 16px;
-    border-radius: 4px;
-    color: #333;
-    width: 171px;
-    max-height: 36px;
-    font-weight:100;
+  margin-top: 6px;
+  border: 2px solid #ccc;
+  padding: 8px;
+  font-size: 16px;
+  border-radius: 4px;
+  color: #333;
+  width: 171px;
+  max-height: 36px;
+  font-weight: 100;
 }
 
 select:focus {
-
 }
