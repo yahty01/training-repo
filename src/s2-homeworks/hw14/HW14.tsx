@@ -17,7 +17,9 @@ const getTechs = (find: string) => {
   return axios
     .get<{
       techs: string[];
-    }>('https://samurai.it-incubator.io/api/3.0/homework/test2', { params: { find } })
+    }>('https://samurai.it-incubator.io/api/3.0/homework/test2', {
+      params: { find },
+    })
     .catch(e => {
       alert(e.response?.data?.errorText || e.message);
     });

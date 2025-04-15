@@ -47,12 +47,14 @@ const HW15 = () => {
   const [searchParams, setSearchParams] = useSearchParams();
   const [techs, setTechs] = useState<TechType[]>([]);
 
-  const sendQuery = (params: any) => {
+  const sendQuery = (params: ParamsType) => {
     setLoading(true);
     getTechs(params)
       .then(res => {
         setLoading(false);
+        console.log("in sendQuery sort", params.sort);
         setTechs(res?.data?.techs || []);
+        setTotalCount(res?.data?.totalCount || 0);
       })
       .catch(e => {
         setLoading(false);
@@ -61,26 +63,22 @@ const HW15 = () => {
   };
 
   const onChangePagination = (newPage: number, newCount: number) => {
-    // делает студент
-    // setPage(
-    // setCount(
-    // sendQuery(
-    // setSearchParams(
-    //
+    setPage(newPage);
+    setCount(newCount);
+    sendQuery({ page: newPage, count: newCount, sort });
+    setSearchParams({ page: String(newPage), count: String(newCount) });
   };
 
   const onChangeSort = (newSort: string) => {
-    // делает студент
-    // setSort(
-    // setPage(1) // при сортировке сбрасывать на 1 страницу
-    // sendQuery(
-    // setSearchParams(
-    //
+    setSort(newSort);
+    setPage(1); // при сортировке сбрасывать на 1 страницу
+    setSearchParams({ page: '1', count: String(count), sort: newSort });
+    sendQuery({ page: 1, count, sort: newSort });
   };
 
   useEffect(() => {
     const params = Object.fromEntries(searchParams);
-    sendQuery({ page: params.page, count: params.count });
+    sendQuery({ page: +params.page, count: +params.count, sort: params.sort });
     setPage(+params.page || 1);
     setCount(+params.count || 4);
   }, []);
@@ -99,7 +97,7 @@ const HW15 = () => {
 
   return (
     <div id={'hw15'}>
-      <div className={s2.hwTitle}>Homework #15</div>
+      <div className={s2.hwTitle}>- #15</div>
 
       <div className={s2.hw}>
         {idLoading && (
