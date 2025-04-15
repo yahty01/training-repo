@@ -52,7 +52,7 @@ const HW15 = () => {
     getTechs(params)
       .then(res => {
         setLoading(false);
-        console.log("in sendQuery sort", params.sort);
+        console.log('in sendQuery sort', params.sort);
         setTechs(res?.data?.techs || []);
         setTotalCount(res?.data?.totalCount || 0);
       })
