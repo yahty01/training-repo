@@ -23,8 +23,8 @@ type TechType = {
 
 type ParamsType = {
   sort: string;
-  page: number;
-  count: number;
+  page: string;
+  count: string;
 };
 
 const getTechs = (params: ParamsType) => {
@@ -52,7 +52,7 @@ const HW15 = () => {
     getTechs(params)
       .then(res => {
         setLoading(false);
-        console.log('in sendQuery sort', params.sort);
+        console.log(res?.data);
         setTechs(res?.data?.techs || []);
         setTotalCount(res?.data?.totalCount || 0);
       })
@@ -65,7 +65,7 @@ const HW15 = () => {
   const onChangePagination = (newPage: number, newCount: number) => {
     setPage(newPage);
     setCount(newCount);
-    sendQuery({ page: newPage, count: newCount, sort });
+    sendQuery({ page: String(newPage), count: String(newCount), sort });
     setSearchParams({ page: String(newPage), count: String(newCount) });
   };
 
@@ -73,12 +73,12 @@ const HW15 = () => {
     setSort(newSort);
     setPage(1); // при сортировке сбрасывать на 1 страницу
     setSearchParams({ page: '1', count: String(count), sort: newSort });
-    sendQuery({ page: 1, count, sort: newSort });
+    sendQuery({ page: '1', count: String(count), sort: newSort });
   };
 
   useEffect(() => {
     const params = Object.fromEntries(searchParams);
-    sendQuery({ page: +params.page, count: +params.count, sort: params.sort });
+    sendQuery({ page: params.page, count: params.count, sort: params.sort });
     setPage(+params.page || 1);
     setCount(+params.count || 4);
   }, []);
